@@ -1,0 +1,46 @@
+# 百度图像识别
+baidu:
+  aip:
+    ocr:
+      appId: 16758662
+      apiKey: UGAF2pYBkOywDifDvL25yxvp
+      secretKey: hHaAR0QPzlbiLaqKGKlpWjG9xHWmDujV
+
+# spring
+spring:
+  profiles:
+    active: dev
+
+  # 设置附件上传大小显示,若不限制改为-1即可
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  redis:
+    host: 127.0.0.1
+    password: Hao123
+    timeout: 1000
+
+debug: false
+
+# json web token
+jwt:
+  token:
+    secret: wangshen
+    expiration: 60 # 单位秒 3600秒=1小时
+    token-head: Bearer
+
+mybatis:
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+
+# dubbo
+dubbo:
+  application:
+    name: annotation-provider
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    name: dubbo
+    port: 20880
+
+

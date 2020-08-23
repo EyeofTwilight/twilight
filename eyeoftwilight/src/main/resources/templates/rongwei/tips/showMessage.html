@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>显示信息</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body >
+<input type="hidden" id="title" th:value="${title}">
+<input type="hidden" id="content" th:value="${content}">
+
+<div class=" text-center" id="showMessage">
+    <h4 class="card-title text-left ml-5 mt-3" style="color: red;">{{title}}</h4>
+    <div class="ml-5" v-for="(value,index) in content">
+        <p class="card-text text-left">
+            {{value}}
+        </p>
+    </div>
+
+</div>
+
+<script>
+var messageTitle = document.getElementById("title").value;
+var messagecontent = document.getElementById("content").value.split(",");
+
+new Vue({
+    el: "#showMessage",
+    data: {
+        title: messageTitle,
+        content: messagecontent
+    }
+});
+
+</script>
+</body>
+</html>

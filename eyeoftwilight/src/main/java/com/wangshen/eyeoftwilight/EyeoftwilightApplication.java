@@ -1,0 +1,25 @@
+package com.wangshen.eyeoftwilight;
+
+import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+/**
+ * @author Administrator
+ */
+@SpringBootApplication
+@EnableDubbo(scanBasePackages = "com.wangshen.eyeoftwilight.alibaba.dubbo.service")
+public class EyeoftwilightApplication
+{
+	public static void main(String[] args)
+	{
+		SpringApplication.run(EyeoftwilightApplication.class, args);
+		System.out.println("ヾ(◍°∇°◍)ﾉﾞ    bootdo启动成功      ヾ(◍°∇°◍)ﾉﾞ\n" +
+				" ______                    _   ______            \n" +
+				"|_   _ \\                  / |_|_   _ `.          \n" +
+				"  | |_) |   .--.    .--. `| |-' | | `. \\  .--.   \n" +
+				"  |  __'. / .'`\\ \\/ .'`\\ \\| |   | |  | |/ .'`\\ \\ \n" +
+				" _| |__) || \\__. || \\__. || |, _| |_.' /| \\__. | \n" +
+				"|_______/  '.__.'  '.__.' \\__/|______.'  '.__.'  ");
+	}
+}

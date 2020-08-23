@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wangshen.login.dao.SysUserDao">
+
+    <resultMap type="com.wangshen.login.entity.SysUser" id="SysUserMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="userId" column="user_id" jdbcType="VARCHAR"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="password" column="password" jdbcType="VARCHAR"/>
+        <result property="companyId" column="company_id" jdbcType="INTEGER"/>
+        <result property="email" column="email" jdbcType="VARCHAR"/>
+        <result property="mobile" column="mobile" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="userIdCreate" column="user_id_create" jdbcType="INTEGER"/>
+        <result property="sex" column="sex" jdbcType="INTEGER"/>
+        <result property="birth" column="birth" jdbcType="TIMESTAMP"/>
+        <result property="liveAddress" column="live_address" jdbcType="VARCHAR"/>
+        <result property="hobby" column="hobby" jdbcType="VARCHAR"/>
+        <result property="province" column="province" jdbcType="VARCHAR"/>
+        <result property="city" column="city" jdbcType="VARCHAR"/>
+        <result property="district" column="district" jdbcType="VARCHAR"/>
+        <result property="sort" column="sort" jdbcType="INTEGER"/>
+        <result property="remark" column="remark" jdbcType="VARCHAR"/>
+        <result property="createBy" column="create_by" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateBy" column="update_by" jdbcType="INTEGER"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="SysUserMap">
+        select
+          id, user_id, name, password, company_id, email, mobile, status, user_id_create, sex, birth, live_address, hobby, province, city, district, sort, remark, create_by, create_time, update_by, update_time
+        from twilight.sys_user
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="SysUserMap">
+        select
+          id, user_id, name, password, company_id, email, mobile, status, user_id_create, sex, birth, live_address, hobby, province, city, district, sort, remark, create_by, create_time, update_by, update_time
+        from twilight.sys_user
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="SysUserMap">
+        select
+        id, user_id, name, password, company_id, email, mobile, status, user_id_create, sex, birth, live_address, hobby,
+        province, city, district, sort, remark, create_by, create_time, update_by, update_time
+        from twilight.sys_user
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="userId != null and userId != ''">
+                and user_id = #{userId}
+            </if>
+            <if test="name != null and name != ''">
+                and name = #{name}
+            </if>
+            <if test="password != null and password != ''">
+                and password = #{password}
+            </if>
+            <if test="companyId != null">
+                and company_id = #{companyId}
+            </if>
+            <if test="email != null and email != ''">
+                and email = #{email}
+            </if>
+            <if test="mobile != null and mobile != ''">
+                and mobile = #{mobile}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="userIdCreate != null">
+                and user_id_create = #{userIdCreate}
+            </if>
+            <if test="sex != null">
+                and sex = #{sex}
+            </if>
+            <if test="birth != null">
+                and birth = #{birth}
+            </if>
+            <if test="liveAddress != null and liveAddress != ''">
+                and live_address = #{liveAddress}
+            </if>
+            <if test="hobby != null and hobby != ''">
+                and hobby = #{hobby}
+            </if>
+            <if test="province != null and province != ''">
+                and province = #{province}
+            </if>
+            <if test="city != null and city != ''">
+                and city = #{city}
+            </if>
+            <if test="district != null and district != ''">
+                and district = #{district}
+            </if>
+            <if test="sort != null">
+                and sort = #{sort}
+            </if>
+            <if test="remark != null and remark != ''">
+                and remark = #{remark}
+            </if>
+            <if test="createBy != null">
+                and create_by = #{createBy}
+            </if>
+            <if test="createTime != null">
+                and create_time = #{createTime}
+            </if>
+            <if test="updateBy != null">
+                and update_by = #{updateBy}
+            </if>
+            <if test="updateTime != null">
+                and update_time = #{updateTime}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into twilight.sys_user(user_id, name, password, company_id, email, mobile, status, user_id_create, sex, birth, live_address, hobby, province, city, district, sort, remark, create_by, create_time, update_by, update_time)
+        values (#{userId}, #{name}, #{password}, #{companyId}, #{email}, #{mobile}, #{status}, #{userIdCreate}, #{sex}, #{birth}, #{liveAddress}, #{hobby}, #{province}, #{city}, #{district}, #{sort}, #{remark}, #{createBy}, #{createTime}, #{updateBy}, #{updateTime})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update twilight.sys_user
+        <set>
+            <if test="userId != null and userId != ''">
+                user_id = #{userId},
+            </if>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="password != null and password != ''">
+                password = #{password},
+            </if>
+            <if test="companyId != null">
+                company_id = #{companyId},
+            </if>
+            <if test="email != null and email != ''">
+                email = #{email},
+            </if>
+            <if test="mobile != null and mobile != ''">
+                mobile = #{mobile},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="userIdCreate != null">
+                user_id_create = #{userIdCreate},
+            </if>
+            <if test="sex != null">
+                sex = #{sex},
+            </if>
+            <if test="birth != null">
+                birth = #{birth},
+            </if>
+            <if test="liveAddress != null and liveAddress != ''">
+                live_address = #{liveAddress},
+            </if>
+            <if test="hobby != null and hobby != ''">
+                hobby = #{hobby},
+            </if>
+            <if test="province != null and province != ''">
+                province = #{province},
+            </if>
+            <if test="city != null and city != ''">
+                city = #{city},
+            </if>
+            <if test="district != null and district != ''">
+                district = #{district},
+            </if>
+            <if test="sort != null">
+                sort = #{sort},
+            </if>
+            <if test="remark != null and remark != ''">
+                remark = #{remark},
+            </if>
+            <if test="createBy != null">
+                create_by = #{createBy},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="updateBy != null">
+                update_by = #{updateBy},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from twilight.sys_user where id = #{id}
+    </delete>
+
+</mapper>

@@ -1,0 +1,11 @@
+server:
+  port: 7788
+
+# dubbo
+dubbo:
+  application:
+    name: annotation-consumer
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  consumer:
+    timeout: 3000 # µ•Œª∫¡√Î

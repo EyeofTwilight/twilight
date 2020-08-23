@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/js/plugin/layui/layui.all.js"></script>
+</head>
+<body>
+<button onclick="aaa()">点我</button>
+<script>
+    function aaa() {
+        layer.open({
+            type: 2,
+            content: '/wagnshen/show/message/message1', //这里content是一个普通的String
+            offset: 'auto',
+            area: ['340px', '250px']
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" content="multipart/form-data">
+    <title>各种验证</title>
+    <script src="/js/plugin/jquery/jquery-3.4.1.min.js"></script>
+    <script src="/js/plugin/layui/layui.all.js"></script>
+    <script src="/js/plugin/jquery/jquery-validation-1.14.0/jquery.validate.min.js"></script>
+    <script src="/js/plugin/jquery/jquery-validation-1.14.0/additional-methods.min.js"></script>
+</head>
+<body>
+<br>
+<br>
+
+<h3>身份证号验证</h3>
+<form id="form" onsubmit="return false">
+    用户名<input type="text" id="userName" name="userName">
+    <br>
+    <br>
+    身份证号<input type="text" id="idNumber" name="idNumber" onblur="validIdNumber()">
+</form>
+<button onclick="save()">保存</button>
+
+<script src="/js/eyeoftwilight/validate/validate.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" content="multipart/form-data">
+    <title>附件相关：上传、下载</title>
+    <script src="/js/plugin/layui/layui.all.js"></script>
+    <script src="/js/plugin/jquery/jquery.js"></script>
+    <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+</head>
+<body>
+<h3>下载--具体功能查看对应的controller</h3>
+<a href="/eyeoftwilight/file/download/1/1">111.txt</a>
+</br>
+</br>
+
+<form action="/eyeoftwilight/file/upload" method="post" ENCTYPE="multipart/form-data">
+    <h3>文件上传</h3>
+    <input type="file" name="file">
+    <br>
+    <br>
+    <input type="submit" value="上传">
+</form>
+</body>
+</html>
