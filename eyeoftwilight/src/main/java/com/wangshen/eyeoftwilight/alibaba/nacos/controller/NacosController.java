@@ -1,7 +1,7 @@
 package com.wangshen.eyeoftwilight.alibaba.nacos.controller;
 
 //import org.springframework.beans.factory.annotation.Value;
-//import org.springframework.cloud.context.config.annotation.RefreshScope;
+//import org.spriAnnotationActionngframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 

@@ -203,6 +203,12 @@
             <version>5.0.0</version>
         </dependency>
 
+        <!-- cglib -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
