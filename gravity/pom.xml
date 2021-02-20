@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.wangshen</groupId>
-    <artifactId>eyeoftwilight</artifactId>
+    <artifactId>gravity</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eyeoftwilight</name>
+    <name>gravity</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -225,6 +225,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
+            <!-- smart doc 写Java标准的注释即可生成接口文档 -->
             <plugin>
                 <groupId>com.github.shalousun</groupId>
                 <artifactId>smart-doc-maven-plugin</artifactId>

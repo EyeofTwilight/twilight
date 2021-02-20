@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.wangshen</groupId>
-    <artifactId>twilight</artifactId>
+    <artifactId>viktor</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>twilight</name>
+    <name>viktor</name>
     <description>Demo project for Spring Boot</description>
     <packaging>pom</packaging>
     <properties>
@@ -20,7 +20,7 @@
 
     <modules>
         <module>duboo-interface</module>
-        <module>eyeoftwilight</module>
+        <module>gravity</module>
         <module>dubbo-consumer</module>
     </modules>
 
