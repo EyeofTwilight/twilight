@@ -15,4 +15,10 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-springboot dubbo
+学习时使用的demo，记录Java知识，以及各种框架的使用方式。
+
+springboot
+
+dubbo 高性能rpc框架，官网-> https://dubbo.apache.org/zh/
+
+smartdoc plugin 用于生成接口文档，官网-> https://gitee.com/smart-doc-team/smart-doc
