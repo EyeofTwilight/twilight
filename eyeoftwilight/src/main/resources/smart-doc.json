@@ -1,0 +1,54 @@
+{
+  "serverUrl": "http://127.0.0.1",
+  "isStrict": false, 
+  "allInOne": true,  
+  "outPath": "C:\\Users\\Administrator\\Desktop\\台灯\\smartdoc生成controller接口文档", 
+  "coverOld": true,  
+  "style":"xt256", 
+  "createDebugPage": true,
+  "packageFilters": "com.wangshen.eyeoftwilight.nglign.login.controller",
+  "md5EncryptedHtmlName": false,
+  "projectName": "smart-doc",
+  "skipTransientField": true,
+  "sortByTitle":false,
+  "requestFieldToUnderline":true, 
+  "responseFieldToUnderline":true,
+  "inlineEnum":true,
+  "recursionLimit":7,
+  "allInOneDocFileName":"index.html",
+  "requestExample":"true",
+  "responseExample":"true",
+  "displayActualType":false,
+  "ignoreRequestParams":[ 
+    "org.springframework.ui.ModelMap"
+  ],
+  "revisionLogs": [{ 
+    "version": "1.0", 
+    "revisionTime": "2020-12-31 10:30", 
+    "status": "update", 
+    "author": "author", 
+    "remarks": "desc" 
+  }],
+  "customResponseFields": [{ 
+    "name": "code",
+    "desc": "响应代码",
+    "value": "00000"
+  }],
+  "rpcApiDependencies":[{ 
+    "artifactId":"SpringBoot2-Dubbo-Api",
+    "groupId":"com.demo",
+    "version":"1.0.0"
+  }],
+  "rpcConsumerConfig": "src/main/resources/consumer-example.conf",
+  "requestHeaders": [{ 
+    "name": "token",
+    "type": "string",
+    "desc": "desc",
+    "required": false,
+    "since": "-"
+  }],
+  "sourceCodePaths": [{
+    "path": "src/main/java",
+    "desc": "测试"
+  }]
+}

@@ -33,6 +33,7 @@ public class SysUserController
 	 *
 	 * @param id 主键
 	 * @return 单条数据
+	 * @apiNote 通过主键查询单条数据
 	 */
 	@GetMapping("/selectOne/{id}")
 	public SysUserDO selectOne(@PathVariable Long id)
