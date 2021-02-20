@@ -2,6 +2,7 @@ package com.wangbaiwan.dubboconsumer.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.wangbaiwan.duboointerface.service.AnnotationService;
+import com.wangbaiwan.model.Result;
 import org.springframework.stereotype.Component;
 
 /**
@@ -16,10 +17,10 @@ public class AnnotationAction
 	/**
 	 * 测试dubbo通过zookeeper调用
 	 *
-	 * @param name
-	 * @return
+	 * @param name 名字
+	 * @return 结果字符串
 	 */
-	public String doSayHello(String name)
+	public Result<String> doSayHello(String name)
 	{
 		return annotationService.sayHello(name);
 	}

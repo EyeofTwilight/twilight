@@ -6,13 +6,12 @@
   "coverOld": true,  
   "style":"xt256", 
   "createDebugPage": true,
-  "packageFilters": "com.wangbaiwan.gravity.nglign.login.controller",
   "md5EncryptedHtmlName": false,
   "projectName": "gravity",
   "skipTransientField": true,
   "sortByTitle":false,
-  "requestFieldToUnderline":true, 
-  "responseFieldToUnderline":true,
+  "requestFieldToUnderline":false,
+  "responseFieldToUnderline":false,
   "inlineEnum":true,
   "recursionLimit":7,
   "allInOneDocFileName":"index.html",
@@ -39,8 +38,7 @@
     "groupId":"com.demo",
     "version":"1.0.0"
   }],
-  "rpcConsumerConfig": "src/main/resources/consumer-example.conf",
-  "requestHeaders": [{ 
+  "requestHeaders": [{
     "name": "token",
     "type": "string",
     "desc": "desc",

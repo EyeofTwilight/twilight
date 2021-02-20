@@ -1,15 +1,19 @@
 package com.wangbaiwan.duboointerface.service;
 
+import com.wangbaiwan.model.Result;
+
 /**
- * @author Administrator
+ * @author wangbaiwan
+ * @version 0.1
+ * @date 2021-02-21
  */
 public interface AnnotationService
 {
 	/**
-	 * dubbo测试使用
+	 * 测试dubbo通过zookeeper调用
 	 *
-	 * @param name
-	 * @return
+	 * @param name 名字
+	 * @return 结果字符串
 	 */
-	String sayHello(String name);
+	Result<String> sayHello(String name);
 }
