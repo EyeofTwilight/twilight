@@ -32,7 +32,7 @@ public interface SysUserDao
 	 * @param params
 	 * @return
 	 */
-	List<SysUserVO> list(Map<String, Object> params);
+	List<SysUserVO> list(SysUserVO params);
 
 	/**
 	 * 新增数据

@@ -15,49 +15,93 @@ import java.io.Serializable;
 public class SysUserDO implements Serializable
 {
 	private static final long serialVersionUID = 781511500716970441L;
-
+	/**
+	 * 主键
+	 */
 	private Long id;
-	//用户全拼
+	/**
+	 * 用户全拼
+	 */
 	private String userId;
-	//姓名
+	/**
+	 * 姓名
+	 */
 	private String name;
-	//密码
+	/**
+	 * 密码
+	 */
 	private String password;
-	//企业ID
+	/**
+	 * 企业ID
+	 */
 	private Long companyId;
-	//邮箱
+	/**
+	 * 邮箱
+	 */
 	private String email;
-	//手机号
+	/**
+	 * 手机号
+	 */
 	private String mobile;
-	//状态 0:禁用，1:正常
+	/**
+	 * 状态 0:禁用，1:正常
+	 */
 	private Integer status;
-	//创建用户id
+	/**
+	 * 创建用户id
+	 */
 	private Long userIdCreate;
-	//性别
+	/**
+	 * 性别
+	 */
 	private Long sex;
-	//出身日期
+	/**
+	 * 出身日期
+	 */
 	private Date birth;
-	//现居住地
+	/**
+	 * 现居住地
+	 */
 	private String liveAddress;
-	//爱好
+	/**
+	 * 爱好
+	 */
 	private String hobby;
-	//省份
+	/**
+	 * 省份
+	 */
 	private String province;
-	//所在城市
+	/**
+	 * 所在城市
+	 */
 	private String city;
-	//所在地区
+	/**
+	 * 所在地区
+	 */
 	private String district;
-	//排序
+	/**
+	 * 排序
+	 */
 	private Long sort;
-	//备注
+	/**
+	 * 备注
+	 */
 	private String remark;
-	//创建人Id
+	/**
+	 * 创建人Id
+	 */
 	private Long createBy;
-	//创建时间
+	/**
+	 * 创建时间
+	 */
 	private Date createTime;
-	//更新人Id
+	/**
+	 * 更新人Id
+	 */
 	private Long updateBy;
-	//修改时间
+	/**
+	 * 修改时间
+	 */
 	private Date updateTime;
 
 

@@ -48,7 +48,7 @@ public class SysUserController
 	 * @return
 	 */
 	@RequestMapping("/list")
-	public List<SysUserVO> list(Map<String, Object> params)
+	public List<SysUserVO> list(SysUserVO params)
 	{
 		List<SysUserVO> list = sysUserService.list(params);
 		return list;

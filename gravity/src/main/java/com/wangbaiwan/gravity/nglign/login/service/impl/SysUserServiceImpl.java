@@ -42,7 +42,7 @@ public class SysUserServiceImpl implements SysUserService
 	 * @return
 	 */
 	@Override
-	public List<SysUserVO> list(Map<String, Object> params)
+	public List<SysUserVO> list(SysUserVO params)
 	{
 		return sysUserDao.list(params);
 	}
@@ -93,8 +93,8 @@ public class SysUserServiceImpl implements SysUserService
 	@Override
 	public SysUserVO getUserInfoByUserId(String userId)
 	{
-		Map<String, Object> params = new HashMap<>(8);
-		params.put("userId", userId);
+		SysUserVO params = new SysUserVO();
+		params.setUserId(userId);
 		List<SysUserVO> list = sysUserDao.list(params);
 		if (list == null || list.size() == 0)
 		{

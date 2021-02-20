@@ -30,7 +30,7 @@ public interface SysUserService
 	 * @param params
 	 * @return
 	 */
-	List<SysUserVO> list(Map<String, Object> params);
+	List<SysUserVO> list(SysUserVO params);
 
 	/**
 	 * 新增数据
